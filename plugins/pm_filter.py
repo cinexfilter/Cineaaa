@@ -135,7 +135,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase')
+            k = await query.message.edit('එක නම් දැනට සයිට් එකේ නෑ 😢 \n  \n ඔයාට ෆිල්ම් එක අපෙන් ඉල්ලීමක් කරන්න පුළුවන්.\n\n #request {search} \n \n කියල මේකට දාන්න\n ෆිල්ම් එක දැම්මට පස්සේ ඔයාට Massage එකකුත් එනවා \n ෆිල්ම් එක දෙන දවස නම් හරියටම කියන්න අමාරුයි \n ගොඩක් ෆිල්ම් ලිස්ට් එකක් දෙන්න.')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -757,7 +757,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("I couldn't find anything related to that. Check your spelling")
+        k = await msg.reply("ඔය කියන විදිහේ එකක් නම් නැ හැබැයි.😢\nඅනිවා අකුරු වැරදී ඇති.මේවගෙන් එකක්ද හොයන්නේ ?")
         await asyncio.sleep(8)
         await k.delete()
         return
