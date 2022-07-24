@@ -54,6 +54,11 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>")
+                        buttons = [[
+            InlineKeyboardButton('🍿 WEB SITE 🍿', url='https://cinesubz.com/'),
+            InlineKeyboardButton('📢 Channel', url='https://t.me/cinesubz')
+        ]]
+        reply_markup=InlineKeyboardMarkup(buttons)
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
