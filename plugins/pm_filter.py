@@ -406,8 +406,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('🍿 WEB SITE 🍿', url='https://cinesubz.com/')
         ], [
-            InlineKeyboardButton('🔔 Channel', url='https://t.me/cinesubz'),
-            InlineKeyboardButton('💁‍♂ Updates', url='https://t.me/cinesubzchat')
+            InlineKeyboardButton('🔔 Channel', url='https://t.me/cinesubzmovies'),
+            InlineKeyboardButton('💁‍♂ Chat', url='https://t.me/cinesubzchatnew')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
