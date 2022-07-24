@@ -1,6 +1,6 @@
-class script(object):
-    START_TXT = """𝙷𝙴𝙻𝙾 {},
-𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, 𝙸 am CineSubz Advanced Movie Finder BOT 🤖"""
+class script(object):   ම
+    START_TXT = """හායි {},
+මම තමයි CineSubz වෙබ් සයිට් එකේ ෆිල්ම් Telegram එකේදිම ඔයාලට හොයලා දෙන CineSubz Advanced Movie Finder BOT 🤖/n Chat එකට ගිහින් ඔයාට ඕන ෆිල්ම් එකේ නම දාන්න./n මන් හොයලා දෙන්නම් 😌"""
     HELP_TXT = """𝙷𝙴𝚈 {}
 𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂."""
     ABOUT_TXT = """✯ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
