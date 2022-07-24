@@ -701,7 +701,8 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Here is what i found for your query {search}"
+        cap = f"හායි{u.mention}😃,ඔයා හොයන {search} පහළ 👇 ලිස්ට් එකේ තියන්වද  බලන්න.
+තියේ නම් Click කරලා ඊට පස්සේ එන Start Button එක Click කලාම ඔයාට එකේ විස්තර සහ 🔗 Link එක ගන්න පුළුවන්. "
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
