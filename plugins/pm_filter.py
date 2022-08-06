@@ -41,7 +41,7 @@ async def give_filter(client, message):
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("oKda", show_alert=True)
+        return await query.answer("මේක ඔයාට Message එකක් නෙමෙයි යාළුවා 😐", show_alert=True)
     try:
         offset = int(offset)
     except:
@@ -120,7 +120,7 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("okDa", show_alert=True)
+        return await query.answer("මේක ඔයාට Message එකක් නෙමෙයි යාළුවා 😐", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
@@ -701,7 +701,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )  
     else:
-        cap = f"හායි යාලු 😃,ඔයා හොයන {search} පහළ ලිස්ට් \n එකේ තියන්වද  බලන්න.\nතියේ නම් Click කරලා ඊට පස්සේ එන\n Start Button එක Click කලාම \nඔයාට එකේ විස්තර සහ 🔗 \nLink එක ගන්න පුළුවන්."
+        cap = f"හායි යාලු 😃,ඔයා හොයන {search} පහළ ලිස්ට් \n එකේ තියන්වද  බලන්න.\nතියේ නම් Click කරලා ඊට පස්සේ එන\n බෝට්ගේ Start Button එක Click කලාම \nඔයාට එකේ විස්තර සහ 🔗 \nLink එක ගන්න පුළුවන්."
     if imdb and imdb.get('poster'):
         try:
             await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -757,7 +757,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("ඔය කියන විදිහේ එකක් නම් නැ හැබැයි.😢\nඅනිවා අකුරු වැරදී ඇති.මේවගෙන් එකක්ද හොයන්නේ ?")
+        k = await msg.reply("හායි,ඔයා හොයන ෆිල්ම් එකේ නම මට පොඩ්ඩක් පැහැදිලි මදි 😢,\nපොඩ්ඩක් පහල ලිස්ට් එකෙන් හරියටම ඔයා හොයන්නේ\n මොකද්ද කියල Click කරන්නකෝ.\nඊට පස්සේ මන් ආයේ Check කරන්නම්.😌")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -769,7 +769,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("ඔය කියන විදිහේ එකක් නම් නැ හැබැයි.😢\nඅනිවා අකුරු වැරදී ඇති.මේවගෙන් එකක්ද හොයන්නේ?",
+    await msg.reply("හායි,ඔයා හොයන ෆිල්ම් එකේ නම මට පොඩ්ඩක් පැහැදිලි මදි 😢,\nපොඩ්ඩක් පහල ලිස්ට් එකෙන් හරියටම ඔයා හොයන්නේ\n මොකද්ද කියල Click කරන්නකෝ.\nඊට පස්සේ මන් ආයේ Check කරන්නම්.😌",
                     reply_markup=InlineKeyboardMarkup(btn))
 
 
