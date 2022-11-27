@@ -55,6 +55,9 @@ You can deploy this bot anywhere.
 <i>**[Watch Deploying Tutorial...](https://youtu.be/1G1XwEOnxxo)**</i>
 
 <details><summary>Deploy To Heroku</summary>
+  
+  #Deploy On Railway
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/xwWE00)
 <p>
 <br>
 <a href="https://telegram.dog/XTZ_HerokuBot?start=RXZhbWFyaWFURy9FdmFNYXJpYSBtYXN0ZXI">
